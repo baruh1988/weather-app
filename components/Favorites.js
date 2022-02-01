@@ -46,7 +46,7 @@ const Favorites = (props) => {
                     py='2'
                 >
                     <HStack alignItems='center' spac={3}>
-                        <Image source={{uri: `http://openweathermap.org/img/wn/${item.fav.forecast.current.weather[0].icon}@2x.png`}} alt={{uri: `http://openweathermap.org/img/wn/${item.fav.forecast.current.weather[0].icon}@2x.png`}} size='xl'/>
+                        <Image source={{uri: `http://openweathermap.org/img/wn/${item.fav.forecast.current.weather[0].icon}@2x.png`}} alt={item.fav.forecast.current.weather[0].icon} size='xl'/>
                         <VStack>
                             <Center>
                                 <Text color='white' bold>
