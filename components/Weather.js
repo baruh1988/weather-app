@@ -79,7 +79,7 @@ const Weather = (props) => {
                             <IconButton onPress={() => {handleFavorites()}} _pressed={{bg: 'blueGray.900'}} icon={<Icon size='sm' as={<MaterialIcons name={isFavorite ? ('favorite') : ('favorite-border')}/>}/>}/>
                         </Heading>
                         <Center _dark={{ bg: 'blueGray.900' }}>
-                            <Image source={{uri: `http://openweathermap.org/img/wn/${currentForecast.current.weather[0].icon}@2x.png`}} alt={{uri: `http://openweathermap.org/img/wn/${currentForecast.current.weather[0].icon}@2x.png`}} size='xl'/>
+                            <Image source={{uri: `http://openweathermap.org/img/wn/${currentForecast.current.weather[0].icon}@2x.png`}} alt={currentForecast.current.weather[0].icon} size='xl'/>
                             <Text bold fontSize='3xl'>{currentForecast.current.temp}˚</Text>
                         </Center>
                     </Center>
@@ -92,7 +92,7 @@ const Weather = (props) => {
                                     <Text>{getDate(item.dt)}</Text>
                                 </Center>
                                 <Center>
-                                    <Image source={{uri: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}} alt={{uri: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}} size='sm'/>
+                                    <Image source={{uri: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}} alt={item.weather[0].icon} size='sm'/>
                                 </Center>
                                 <Center >
                                     <Text>{item.temp.day}˚/{item.temp.night}˚</Text>
